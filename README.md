@@ -12,3 +12,6 @@ when they see number from helper
 - version 1.1
 now supports two languages: 'ua' (Ukrainian), 'en' (English)
 'ua' set by default
+
+- version 1.2
+button for changing language

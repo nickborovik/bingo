@@ -27,6 +27,7 @@ class BingoGUI:
             command=self.restart,
             width=10,
         )
+        self.restart_button.pack(side='right', expand=True)
         self.change_lang_button = tk.Button(
             self.root,
             text=translations[self._lang]['lang_name'],
@@ -34,8 +35,7 @@ class BingoGUI:
             command=self.change_lang,
             width=10,
         )
-        self.change_lang_button.pack(side='left', expand=True)
-        self.restart_button.pack(side='right', expand=True)
+        self.change_lang_button.pack(side='right', expand=True)
         self.root.mainloop()
 
     def show_next_number(self):
