@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-__version__ = '1.1'
+__version__ = '1.2'
 
 from core.gui import BingoGUI
 
