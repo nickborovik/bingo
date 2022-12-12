@@ -1,18 +1,19 @@
 import tkinter as tk
-from core.bingo import BingoCage
+from .bingo import BingoCage
+from .translations import translations
 
 
 class BingoGUI:
-    def __init__(self, geometry='1650x1050'):
+    def __init__(self, geometry='1650x1050', lang='en'):
         self._bingo_cage = BingoCage()
         self.root = tk.Tk()
-        self.root.title('Bingo Game')
+        self.root.title(translations[lang]['title'])
         self.root.geometry(geometry)
         self.numbers = tk.Label(self.root, font=('Monospace', 50), wraplength=1000, justify="center")
         self.numbers.pack(padx=20, pady=20)
         self.next_button = tk.Button(
             self.root,
-            text='Next',
+            text=translations[lang]['next_button'],
             font=('Monospace', 40),
             command=self.show_next_number,
             width=10,
@@ -20,7 +21,7 @@ class BingoGUI:
         self.next_button.pack(side='left', expand=True)
         self.restart_button = tk.Button(
             self.root,
-            text='Reset',
+            text=translations[lang]['restart_button'],
             font=('Monospace', 40),
             command=self.restart,
             width=10,
